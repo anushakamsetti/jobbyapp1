@@ -231,7 +231,7 @@ class AllJobs extends Component {
                <p className="failure-paragraph">
                   we cannot seem to find the page you are looking for 
                </p>
-               <div className=jobs-failure-button-container>
+               <div className="jobs-failure-button-container">
                  <button 
                    className="failure-button"
                    type="button"
@@ -247,7 +247,7 @@ class AllJobs extends Component {
             const {jobsData} = this.state
             const noJobs = jobsData.length === 0
             return noJobs ? (
-                <div className="no-jobs-container>
+                <div className="no-jobs-container">
                    <img 
                      className="no-jobs-img"
                      src="https://assets.ccbp.in/frontend/react-js/no-jobs-img.png"

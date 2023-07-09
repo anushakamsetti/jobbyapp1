@@ -1,3 +1,10 @@
+import {Router, Switch, Redirect} from 'react-router-dom'
+import LoginForm from './components/LoginForm'
+import Home from './components/Home'
+import NotFound from './components/NotFound'
+import ProtectedRouter from './components/ProtectedRoute'
+import AboutJobItem from './components/AboutJobItem'
+import AllJobs from './components/AllJobs'
 import './App.css'
 
 // These are the lists used in the application. You can move them to any component needed.
@@ -40,6 +47,15 @@ const salaryRangesList = [
 ]
 
 // Replace your code here
-const App = () => <div>Hello World</div>
+const App = () => (
+  <Switch>
+    <Router exact path="/login" component={LoginForm} />
+    <ProtectedRouter exact path="/" component={Home} />
+    <ProtectedRouter exact path="/jobs" component={AllJobs} />
+    <ProtectedRouter exact path="/jobs/:id" component={AboutJobItem} />
+    <Router path="/not-found" component={NotFound} />
+    <Redirect to="not-found" />
+  </Switch>
+)
 
 export default App

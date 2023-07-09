@@ -16,7 +16,7 @@ const JobItem = props => {
         title,
     } = jobData
     return (
-        <Link to{`/jobs/${id}`} className="link-item">
+        <Link to={`/jobs/${id}`} className="link-item">
            <li className="job-item-container">
              <div className="first-part-container">
                <div className="img-title-container">
